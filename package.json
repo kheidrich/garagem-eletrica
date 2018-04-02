@@ -16,7 +16,8 @@
     "url": "https://github.com/kheidrich/garagem-eletrica/issues"
   },
   "homepage": "https://github.com/kheidrich/garagem-eletrica#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "electron": "^1.8.4"
   }
 }
