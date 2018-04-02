@@ -1,0 +1,22 @@
+{
+  "name": "garagem-eletrica",
+  "version": "1.0.0",
+  "description": "Uma ferramenta de gestão para uma oficina de elétrica automotiva.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kheidrich/garagem-eletrica.git"
+  },
+  "author": "Kevin Heidrich Pìnzon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kheidrich/garagem-eletrica/issues"
+  },
+  "homepage": "https://github.com/kheidrich/garagem-eletrica#readme",
+  "dependencies": {
+    "electron": "^1.8.4"
+  }
+}
