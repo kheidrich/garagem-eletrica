@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 
+import 'materialize-css';
+import 'materialize-css/dist/css/materialize.css';
+
 if(module.hot)
     module.hot.accept();
 

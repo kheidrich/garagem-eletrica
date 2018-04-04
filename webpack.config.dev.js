@@ -23,11 +23,11 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['env', 'react']
-                    }
+                    options: { presets: ['env', 'react'] }
                 }
-            }
+            },
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            { test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader'] }
         ]
     },
     devtool: 'inline-source-map',
@@ -39,7 +39,7 @@ module.exports = {
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new htmlPlugin({template: './src/index.html'}),
+        new htmlPlugin({ template: './src/index.html' }),
         new copyPlugin(['./src/main.js', './package.json'])
     ]
 }
