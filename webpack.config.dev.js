@@ -27,7 +27,7 @@ module.exports = {
                 }
             },
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-            { test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader'] }
+            { test: /\.(woff|woff2|eot|ttf|otf|jpg|png)$/, use: ['file-loader'] }
         ]
     },
     devtool: 'inline-source-map',
