@@ -12,22 +12,22 @@ export default class Col extends Component {
 
     render() {
         return (
-            <div className={`col ${this.getFormatedCollumnSizesClasses()} ${this.getFormatedCollumnModifiersClasses()}`}>
+            <div className={`col ${this.getFormattedCollumnSizesClasses()} ${this.getFormattedCollumnModifiersClasses()}`}>
                 {this.props.children}
             </div>
         );
     }
 
-    getFormatedCollumnSizesClasses() {
+    getFormattedCollumnSizesClasses() {
         const passedCollumnSizes = this.collumnSizes.filter(size => this.props.hasOwnProperty(size));
 
-        return passedCollumnSizes.reduce((formatedClasses, size) => `${formatedClasses} ${size}${this.props[size]}`, '');
+        return passedCollumnSizes.reduce((formattedClasses, size) => `${formattedClasses} ${size}${this.props[size]}`, '');
     }
 
-    getFormatedCollumnModifiersClasses() {
+    getFormattedCollumnModifiersClasses() {
         const passedCollumnModifiers = this.collumnModifiers.filter(modifier => this.props.hasOwnProperty(modifier));
 
-        return passedCollumnModifiers.reduce((formatedClasses, modifier) => `${formatedClasses} ${modifier}${this.props[modifier]}`, '');
+        return passedCollumnModifiers.reduce((formattedClasses, modifier) => `${formattedClasses} ${modifier}${this.props[modifier]}`, '');
     }
 
     static propTypes = {
