@@ -23,14 +23,17 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
-                    options: { presets: ['env', 'react'] }
+                    options: { 
+                        presets: ['env', 'react'],
+                        plugins: ['transform-class-properties']
+                    }
                 }
             },
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
             { test: /\.(woff|woff2|eot|ttf|otf|jpg|png)$/, use: ['file-loader'] }
         ]
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         port: 4000,
         hot: true,
