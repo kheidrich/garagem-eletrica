@@ -19,19 +19,15 @@ export default class Col extends Component {
     }
 
     getFormatedCollumnSizesClasses() {
-        return this.collumnSizes.reduce((formatedClasses, size) =>
-            (this.props[size])
-                ? `${formatedClasses} ${size}${this.props[size]}`
-                : formatedClasses,
-            '');
+        const passedCollumnSizes = this.collumnSizes.filter(size => this.props.hasOwnProperty(size));
+
+        return passedCollumnSizes.reduce((formatedClasses, size) => `${formatedClasses} ${size}${this.props[size]}`, '');
     }
 
     getFormatedCollumnModifiersClasses() {
-        return this.collumnModifiers.reduce((formatedClasses, modifier) =>
-            (this.props[modifier])
-                ? `${formatedClasses} ${modifier}-${this.props[modifier]}`
-                : formatedClasses,
-            '');
+        const passedCollumnModifiers = this.collumnModifiers.filter(modifier => this.props.hasOwnProperty(modifier));
+
+        return passedCollumnModifiers.reduce((formatedClasses, modifier) => `${formatedClasses} ${modifier}${this.props[modifier]}`, '');
     }
 
     static propTypes = {
