@@ -1,6 +1,10 @@
 @font-face {
     font-family:"Belair Light";
-    src: url("Belair Light.ttf");
+    src: url(".assets/fonts/Belair Light.ttf");
+}
+
+html {
+    background-color: gainsboro;
 }
 
 .belair-font {

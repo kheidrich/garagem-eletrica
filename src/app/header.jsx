@@ -1,5 +1,5 @@
 import React from 'react';
-import raceFlagIcon from './race-flag-icon.png';
+import raceFlagIcon from '../assets/images/race-flag-icon.png';
 
 class Header extends React.Component {
     render() {
