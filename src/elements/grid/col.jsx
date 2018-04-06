@@ -6,11 +6,19 @@ export default class Col extends Component {
     constructor(props) {
         super(props)
 
-        this.collumnSizes = ['s', 'm', 'x', 'xl'];
+        this.collumnSizes = ['s', 'm', 'l', 'xl'];
         this.collumnModifiers = ['offset', 'pull', 'push'];
     }
 
-    getFormatedCollumnSizeClasses() {
+    render() {
+        return (
+            <div className={`col ${this.getFormatedCollumnSizesClasses()} ${this.getFormatedCollumnModifiersClasses()}`}>
+                {this.props.children}
+            </div>
+        );
+    }
+
+    getFormatedCollumnSizesClasses() {
         return this.collumnSizes.reduce((formatedClasses, size) =>
             (this.props[size])
                 ? `${formatedClasses} ${size}${this.props[size]}`
@@ -24,17 +32,6 @@ export default class Col extends Component {
                 ? `${formatedClasses} ${modifier}-${this.props[modifier]}`
                 : formatedClasses,
             '');
-    }
-
-    render() {
-        return (
-            <div className={`col 
-                            ${this.getFormatedCollumnSizeClasses()} 
-                            ${this.getFormatedCollumnModifiersClasses()}
-                            `}>
-                {this.props.children}
-            </div>
-        );
     }
 
     static propTypes = {
