@@ -1,0 +1,9 @@
+@font-face {
+    font-family:"Belair Light";
+    src: url("./assets/fonts/Belair Light.ttf");
+}
+
+.belair-font {
+    font-family: 'Belair Light';
+    font-style: normal;
+}
