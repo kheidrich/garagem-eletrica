@@ -18,3 +18,7 @@ nav .race-flag-icon {
     filter: invert(100%);
     opacity: 0.3;
 }
+
+.no-margin {
+    margin: 0px;
+}

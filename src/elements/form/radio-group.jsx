@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 export default class RadioGroup extends Component {
     constructor(props) {

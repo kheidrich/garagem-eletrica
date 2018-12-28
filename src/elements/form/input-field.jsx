@@ -4,7 +4,7 @@ export default class InputField extends Component {
   render() {
     return (
       <div className="input-field">
-          {this.props.children}
+        {this.props.children}
       </div>
     )
   }
