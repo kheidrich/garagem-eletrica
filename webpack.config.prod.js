@@ -5,13 +5,7 @@ const copyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.jsx',
-    mode: 'development',
-    devtool: 'source-map',
-    devServer: {
-        port: 4000,
-        hot: true,
-        contentBase: './dist'
-    },
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -46,8 +40,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new htmlPlugin({ template: './src/index.html' })
+        new htmlPlugin({ template: './src/index.html' }),
+        new copyPlugin(['./src/main.js', './package.json'])
     ]
 }
