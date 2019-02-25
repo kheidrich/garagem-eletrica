@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './app/header';
-import { Card, CardAction, CardContent, CardTitle } from './elements/card';
-import { Row, Col, Section, Divider } from './elements/layout';
-import { TextInput, Select, RadioGroup, InputField } from './elements/form';
+import Header from './header';
+import { Card, CardAction, CardContent, CardTitle } from './materialize/card'
+import { Row, Col, Section, Divider } from './materialize/grid';
+import { TextInput, Select, RadioGroup, InputField } from './materialize/form';
 
 export default class App extends React.Component {
     constructor() {
