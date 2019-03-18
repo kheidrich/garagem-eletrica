@@ -17,7 +17,7 @@ export default class App extends React.Component {
                 <div className="container">
                     <Row>
                         <Col s="5">
-                            <Card color="white">
+                            <Card backgroundColor={{ color: 'white' }}>
                                 <CardContent>
                                     <CardTitle center={true}>Adicionar Movimento</CardTitle>
                                     <form>

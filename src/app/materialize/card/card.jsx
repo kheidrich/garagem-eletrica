@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import BackgroundColorShape from '../color/BackgroundColorShape';
 
 class Card extends Component {
     constructor(props) {
@@ -8,20 +8,21 @@ class Card extends Component {
 
     render() {
         return (
-            <div className={`card ${this.props.color} ${this.props.colorIntensity}`}>
+            <div className={`card ${this.props.backgroundColor.color} ${this.props.backgroundColor.intensity}`}>
                 {this.props.children}
             </div>
         );
     }
 
     static defaultProps = {
-        color: '',
-        colorIntensity: ''
+        backgroundColor: {
+            color: '',
+            intensity: ''
+        }
     }
 
     static propTypes = {
-        color: PropTypes.string,
-        colorIntensity: PropTypes.string
+        backgroundColor: BackgroundColorShape
     }
 }
 
