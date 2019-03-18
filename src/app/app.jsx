@@ -30,6 +30,7 @@ export default class App extends React.Component {
                                                             { text: 'Entrada', value: 'entrada' },
                                                             { text: 'Saida', value: 'saida' }
                                                         ]}
+                                                        initiallyCheckedOption="entrada"
                                                         optionsPerLine={2}>
                                                     </RadioGroup>
                                                 </InputField>

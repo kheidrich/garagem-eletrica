@@ -5,7 +5,7 @@ export default class RadioGroup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: props.checked || ''
+            checked: props.initiallyCheckedOption || ''
         };
     }
 
@@ -14,9 +14,9 @@ export default class RadioGroup extends Component {
             <Fragment>
                 {
                     this.props.options.map((option, index) => {
-                        const onePerLine = (!this.props.optionsPerLine || this.props.optionsPerLine === 1);
-                        const lastRadioOfTheLine = (this.props.optionsPerLine && (index + 1) % this.props.optionsPerLine === 0);
-                        const hasToBreakLine = (onePerLine || lastRadioOfTheLine);
+                        const oneOptionPerLine = (!this.props.optionsPerLine || this.props.optionsPerLine === 1);
+                        const lastOptionOfTheLine = (this.props.optionsPerLine && (index + 1) % this.props.optionsPerLine === 0);
+                        const hasToBreakLine = (oneOptionPerLine || lastOptionOfTheLine);
 
                         return (
                             <Fragment key={index}>
@@ -26,7 +26,7 @@ export default class RadioGroup extends Component {
                                             type="radio"
                                             value={option.value}
                                             checked={this.state.checked === option.value}
-                                            onChange={this.handleRadioChecked.bind(this)} />
+                                            onChange={this.handleOptionChecked.bind(this)} />
                                         <span>{option.text}</span>
                                     </label>
                                 </span>
@@ -39,18 +39,18 @@ export default class RadioGroup extends Component {
         )
     }
 
-    handleRadioChecked(event) {
-        const checked = event.target.value;
+    handleOptionChecked(event) {
+        const checkedOption = event.target.value;
 
-        this.setState({ checked });
-        if (this.props.onRadioChecked) this.props.onRadioChecked(checked);
+        this.setState({ checked: checkedOption });
+        if (this.props.onOptionChecked) this.props.onOptionChecked(checkedOption);
     }
 
     static propTypes = {
         name: PropTypes.string.isRequired,
         options: PropTypes.array.isRequired,
-        checked: PropTypes.string,
+        initiallyCheckedOption: PropTypes.string,
         optionsPerLine: PropTypes.number,
-        onRadioChecked: PropTypes.func
+        onOptionChecked: PropTypes.func
     }
 }

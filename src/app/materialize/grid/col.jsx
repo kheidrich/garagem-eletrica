@@ -7,25 +7,25 @@ export default class Col extends Component {
         super(props)
 
         this.screenWidthSelectors = ['s', 'm', 'l', 'xl'];
-        this.modifiers = ['offset', 'pull', 'push'];
+        this.collumnModifiers = ['offset', 'pull', 'push'];
     }
 
     render() {
         return (
-            <div className={`col ${this.getFormattedSizesClasses()} ${this.getFormattedModifiersClasses()}`}>
+            <div className={`col ${this.getFormattedCollumnSizeClasses()} ${this.getFormattedCollumnModifierClasses()}`}>
                 {this.props.children}
             </div>
         );
     }
 
-    getFormattedSizesClasses() {
-        const passedScreenWidthSelectors = this.screenWidthSelectors.filter(screenWidthSelector => this.props.hasOwnProperty(screenWidthSelector));
+    getFormattedCollumnSizeClasses() {
+        const passedScreenWidthSelectors = this.screenWidthSelectors.filter(selector => this.props.hasOwnProperty(selector));
 
-        return passedScreenWidthSelectors.reduce((formattedClasses, screenWidthSelector) => `${formattedClasses} ${screenWidthSelector}${this.props[screenWidthSelector]}`, '');
+        return passedScreenWidthSelectors.reduce((formattedClasses, selector) => `${formattedClasses} ${selector}${this.props[selector]}`, '');
     }
 
-    getFormattedModifiersClasses() {
-        const passedCollumnModifiers = this.modifiers.filter(modifier => this.props.hasOwnProperty(modifier));
+    getFormattedCollumnModifierClasses() {
+        const passedCollumnModifiers = this.collumnModifiers.filter(modifier => this.props.hasOwnProperty(modifier));
 
         return passedCollumnModifiers.reduce((formattedClasses, modifier) => `${formattedClasses} ${modifier}${this.props[modifier]}`, '');
     }
