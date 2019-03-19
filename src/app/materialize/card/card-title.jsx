@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class CardTitle extends Component {
     render() {
       return (
-        <span className={`card-title ${this.props.center ? 'center' : ''}`}>{this.props.children}</span>
+        <span className={`card-title ${this.props.center && 'center'}`}>{this.props.children}</span>
       );
     }
 

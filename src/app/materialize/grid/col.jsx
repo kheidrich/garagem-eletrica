@@ -21,13 +21,17 @@ export default class Col extends Component {
     getFormattedCollumnSizeClasses() {
         const passedScreenWidthSelectors = this.screenWidthSelectors.filter(selector => this.props.hasOwnProperty(selector));
 
-        return passedScreenWidthSelectors.reduce((formattedClasses, selector) => `${formattedClasses} ${selector}${this.props[selector]}`, '');
+        return passedScreenWidthSelectors.reduce(
+            (formattedClasses, selector) => `${formattedClasses} ${selector}${this.props[selector]}`,
+            '');
     }
 
     getFormattedCollumnModifierClasses() {
         const passedCollumnModifiers = this.collumnModifiers.filter(modifier => this.props.hasOwnProperty(modifier));
 
-        return passedCollumnModifiers.reduce((formattedClasses, modifier) => `${formattedClasses} ${modifier}${this.props[modifier]}`, '');
+        return passedCollumnModifiers.reduce(
+            (formattedClasses, modifier) => `${formattedClasses} ${modifier}${this.props[modifier]}`,
+            '');
     }
 
     static propTypes = {

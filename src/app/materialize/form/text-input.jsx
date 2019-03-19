@@ -14,7 +14,7 @@ export default class TextInput extends Component {
 
     return (
       <Fragment>
-        {hasToRenderIcon ? <i className="material-icons prefix">{this.props.icon}</i> : ''}
+        {hasToRenderIcon && <i className="material-icons prefix">{this.props.icon}</i>}
         <input name={this.props.name}
           type={this.props.type}
           step={this.props.step}

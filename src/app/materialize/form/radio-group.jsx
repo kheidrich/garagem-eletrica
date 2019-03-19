@@ -30,7 +30,7 @@ export default class RadioGroup extends Component {
                                         <span>{option.text}</span>
                                     </label>
                                 </span>
-                                {hasToBreakLine ? <br /> : ''}
+                                {hasToBreakLine && <br />}
                             </Fragment>
                         );
                     })
