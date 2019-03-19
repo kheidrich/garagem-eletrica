@@ -12,5 +12,6 @@ export default [
     'accent-4',
     'accent-3',
     'accent-2',
-    'accent-1'
+    'accent-1',
+    ''
 ];

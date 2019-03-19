@@ -23,6 +23,9 @@ const backgroundColors = [
 ];
 const textColors = backgroundColors.map(color => `${color}-text`);
 
+backgroundColors.push('')
+textColors.push('');
+
 export default {
     backgroundColors,
     textColors
