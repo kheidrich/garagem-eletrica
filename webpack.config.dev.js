@@ -4,7 +4,7 @@ const htmlPlugin = require('html-webpack-plugin');
 const copyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: './src/index.tsx',
     mode: 'development',
     devtool: 'source-map',
     devServer: {
@@ -19,21 +19,15 @@ module.exports = {
     },
     target: 'electron-renderer',
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.ts', '.tsx', '.js'],
         modules: ['node_modules']
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env', 'react'],
-                        plugins: ['transform-class-properties']
-                    }
-                }
+                test: /\.ts(x?)$/,
+                include: /src/,
+                use: 'ts-loader'
             },
             {
                 test: /\.css$/,

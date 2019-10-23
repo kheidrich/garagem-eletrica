@@ -29,4 +29,4 @@ textColors.push('');
 export default {
     backgroundColors,
     textColors
-}
+};

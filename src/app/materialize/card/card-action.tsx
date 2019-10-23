@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-class CardAction extends Component {
-    render() {
+export default class CardAction extends Component {
+    public render() {
         return (
             <div className="card-action">
                 {this.props.children}
@@ -9,5 +9,3 @@ class CardAction extends Component {
         );
     }
 }
-
-export default CardAction;

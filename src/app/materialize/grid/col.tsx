@@ -10,7 +10,7 @@ export default class Col extends Component {
         this.collumnModifiers = ['offset', 'pull', 'push'];
     }
 
-    render() {
+    public render() {
         return (
             <div className={`col ${this.getFormattedCollumnSizeClasses()} ${this.getFormattedCollumnModifierClasses()}`}>
                 {this.props.children}

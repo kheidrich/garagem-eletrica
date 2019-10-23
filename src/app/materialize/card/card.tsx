@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import BackgroundColorShape from '../color/BackgroundColorShape';
 
-class Card extends Component {
+export default class Card extends Component {
     constructor(props) {
         super(props);
     }
 
-    render() {
+    public render() {
         return (
             <div className={`card ${this.props.backgroundColor.color} ${this.props.backgroundColor.intensity}`}>
                 {this.props.children}
@@ -25,5 +25,3 @@ class Card extends Component {
         backgroundColor: BackgroundColorShape
     }
 }
-
-export default Card;

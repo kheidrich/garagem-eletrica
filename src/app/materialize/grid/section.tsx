@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Section extends Component {
-    render() {
+    public render() {
         return (
             <div className="section">
                 {this.props.children}

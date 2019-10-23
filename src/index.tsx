@@ -9,9 +9,9 @@ import './style.css';
 import './assets/material-icons.css';
 import './assets/belair-light-font.css';
 
-if(module.hot)
+if (module.hot)
     module.hot.accept();
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(<App/>, rootElement);
+ReactDOM.render(<App />, rootElement);

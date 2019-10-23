@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default class Divider extends Component {
-    render() {
+    public render() {
         return (
             <div className="divider"></div>
         )

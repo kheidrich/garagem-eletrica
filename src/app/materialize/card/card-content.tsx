@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextColorShape from '../color/TextColorShape';
 
-class CardContent extends Component {
-    render() {
+export default class CardContent extends Component {
+    public render() {
         return (
             <div className={`card-content ${this.props.textColor.color} ${this.props.textColor.intensity}`}>
                 {this.props.children}
@@ -22,5 +22,3 @@ class CardContent extends Component {
         }
     }
 }
-
-export default CardContent;

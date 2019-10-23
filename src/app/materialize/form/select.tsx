@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormSelect } from 'materialize-css';
 
 export default class Select extends Component {
-    render() {
+    public render() {
         return (
             <select ref={(select) => this.select = select}
                 value={this.props.selected}

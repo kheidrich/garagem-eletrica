@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './header';
 import { Card, CardAction, CardContent, CardTitle } from './materialize/card'
 import { Row, Col, Section, Divider } from './materialize/grid';
 import { TextInput, Select, RadioGroup, InputField } from './materialize/form';
 
-export default class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {};
+export default class App extends Component {
+    public state: { valor: string };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            valor: ''
+        };
     }
 
-    render() {
+    public render() {
         return (
             <div>
-                <Header ></Header>
+                <Header />
                 <div className="container">
                     <Row>
                         <Col s="5">
@@ -31,8 +35,7 @@ export default class App extends React.Component {
                                                             { text: 'Saida', value: 'saida' }
                                                         ]}
                                                         initiallyCheckedOption="entrada"
-                                                        optionsPerLine={2}>
-                                                    </RadioGroup>
+                                                        optionsPerLine={2} />
                                                 </InputField>
                                             </Col>
                                             <Col s="12">
@@ -44,8 +47,7 @@ export default class App extends React.Component {
                                                         min={0.01}
                                                         icon="attach_money"
                                                         value={this.state.valor}
-                                                        onChange={(value) => this.setState({ value })}>
-                                                    </TextInput>
+                                                        onChange={(value) => this.setState({ value })} />
                                                 </InputField>
                                             </Col>
                                         </Row>

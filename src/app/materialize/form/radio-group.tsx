@@ -9,13 +9,16 @@ export default class RadioGroup extends Component {
         };
     }
 
-    render() {
+    public render() {
         return (
             <Fragment>
                 {
                     this.props.options.map((option, index) => {
                         const oneOptionPerLine = (!this.props.optionsPerLine || this.props.optionsPerLine === 1);
-                        const lastOptionOfTheLine = (this.props.optionsPerLine && (index + 1) % this.props.optionsPerLine === 0);
+                        const lastOptionOfTheLine = (
+                            this.props.optionsPerLine &&
+                            (index + 1) % this.props.optionsPerLine === 0
+                        );
                         const hasToBreakLine = (oneOptionPerLine || lastOptionOfTheLine);
 
                         return (

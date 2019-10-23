@@ -9,7 +9,7 @@ export default class TextInput extends Component {
     }
   }
 
-  render() {
+  public render() {
     const hasToRenderIcon = Boolean(this.props.icon);
 
     return (
