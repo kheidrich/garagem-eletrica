@@ -1,23 +1,35 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { FormSelect } from 'materialize-css';
+import SelectOption from './select-option';
 
-export default class Select extends Component {
+type SelectProps = {
+    selected: string;
+    options: Array<SelectOption>
+    onChange: (selected: string) => void
+}
+
+export default class Select extends Component<SelectProps> {
+    private select: HTMLSelectElement;
+
     public render() {
         return (
-            <select ref={(select) => this.select = select}
+            <select
+                ref={(select: HTMLSelectElement) => this.select = select}
                 value={this.props.selected}
-                onChange={(e) => this.props.onChange(e.target.value)}>
-                {
-                    this.props.options.map(
-                        option =>
-                            <option key={option.value}
-                                value={option.value}>
-                                {option.text}
+                onChange={(e) => this.props.onChange(e.target.value)}
+                {...this.props.options.map(
+                    option =>
+                        (
+                            <option
+                                key={option.value}
+                                value={option.value}
+                            >
+                                {option.label}
                             </option>
-                    )
-                }
-            </select>
+                        )
+                )}
+            />
         );
     }
 

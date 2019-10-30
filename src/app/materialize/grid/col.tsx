@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class Col extends Component {
+type CollumSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12;
+type ColProps = {
+    s?: CollumSize,
+    m?: CollumSize,
+    l?: CollumSize,
+    xl?: CollumSize,
+    offset?: CollumSize,
+    pull?: CollumSize,
+    push?: CollumSize
+}
 
-    constructor(props) {
-        super(props)
-
-        this.screenWidthSelectors = ['s', 'm', 'l', 'xl'];
-        this.collumnModifiers = ['offset', 'pull', 'push'];
-    }
+export default class Col extends Component<ColProps> {
+    private screenWidthSelectors: string[] = ['s', 'm', 'l', 'xl'];
+    private collumnModifiers: string[] = ['offset', 'pull', 'push'];
 
     public render() {
         return (
@@ -35,12 +41,12 @@ export default class Col extends Component {
     }
 
     static propTypes = {
-        s: PropTypes.string,
-        m: PropTypes.string,
-        l: PropTypes.string,
-        xl: PropTypes.string,
-        offset: PropTypes.string,
-        pull: PropTypes.string,
-        push: PropTypes.string
+        s: PropTypes.number,
+        m: PropTypes.number,
+        l: PropTypes.number,
+        xl: PropTypes.number,
+        offset: PropTypes.number,
+        pull: PropTypes.number,
+        push: PropTypes.number
     }
 }

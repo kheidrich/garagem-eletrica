@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import Colors from './Colors';
-import ColorIntensities from './ColorIntensities'
+import BackgroundColor from './BackgroundColor';
+import ColorIntensity from './ColorIntensity';
 
 export default PropTypes.shape({
-    color: PropTypes.oneOf(Colors.backgroundColors),
-    intensity: PropTypes.oneOf(ColorIntensities)
+    color: PropTypes.oneOf(Object.values(BackgroundColor)),
+    intensity: PropTypes.oneOf(Object.values(ColorIntensity))
 });

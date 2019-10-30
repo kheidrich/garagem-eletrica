@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import MaterializeColor from '../color/MaterializeColor';
 import BackgroundColorShape from '../color/BackgroundColorShape';
 
-export default class Card extends Component {
+type CardProps = {
+    backgroundColor: MaterializeColor
+}
+
+export default class Card extends Component<CardProps> {
     constructor(props) {
         super(props);
     }
@@ -14,14 +19,14 @@ export default class Card extends Component {
         );
     }
 
+    static propTypes = {
+        backgroundColor: BackgroundColorShape
+    }
+
     static defaultProps = {
         backgroundColor: {
             color: '',
             intensity: ''
         }
-    }
-
-    static propTypes = {
-        backgroundColor: BackgroundColorShape
     }
 }

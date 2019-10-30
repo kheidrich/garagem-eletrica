@@ -1,7 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import SelectableOption from './radio-option';
 
-export default class RadioGroup extends Component {
+type RadioGroupProps = {
+    name: string,
+    options: Array<RadioOption>,
+    optionsPerLine?: number,
+    initiallyCheckedOption?: string,
+    onOptionChecked?: ({ checked: boolean }) => void
+}
+
+type RadioGroupState = {
+    checked: string
+}
+
+export default class RadioGroup extends Component<RadioGroupProps, RadioGroupState> {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +43,7 @@ export default class RadioGroup extends Component {
                                             value={option.value}
                                             checked={this.state.checked === option.value}
                                             onChange={this.handleOptionChecked.bind(this)} />
-                                        <span>{option.text}</span>
+                                        <span>{option.label}</span>
                                     </label>
                                 </span>
                                 {hasToBreakLine && <br />}
@@ -42,11 +55,12 @@ export default class RadioGroup extends Component {
         )
     }
 
-    handleOptionChecked(event) {
+    private handleOptionChecked(event) {
         const checkedOption = event.target.value;
 
         this.setState({ checked: checkedOption });
-        if (this.props.onOptionChecked) this.props.onOptionChecked(checkedOption);
+        if (this.props.onOptionChecked)
+            this.props.onOptionChecked(checkedOption);
     }
 
     static propTypes = {

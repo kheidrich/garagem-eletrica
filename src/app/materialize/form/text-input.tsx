@@ -1,7 +1,25 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-export default class TextInput extends Component {
+type TextInputProps = {
+  label: string,
+  name: string,
+  type: string,
+  value?: string,
+  icon?: string,
+  pattern?: string,
+  step?: number,
+  min?: number,
+  max?: number,
+  maxLength?: number,
+  onChange?: (value: string) => void
+}
+
+type TextInputState = {
+  value: string
+}
+
+export default class TextInput extends Component<TextInputProps, TextInputState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +33,8 @@ export default class TextInput extends Component {
     return (
       <Fragment>
         {hasToRenderIcon && <i className="material-icons prefix">{this.props.icon}</i>}
-        <input name={this.props.name}
+        <input
+          name={this.props.name}
           type={this.props.type}
           step={this.props.step}
           min={this.props.min}
@@ -23,7 +42,7 @@ export default class TextInput extends Component {
           pattern={this.props.pattern}
           maxLength={this.props.maxLength}
           value={this.state.value}
-          onChange={this.handleInputValueChange.bind(this)}
+          onChange={(event) => this.handleInputValueChange.bind(this)}
         />
         <label htmlFor={this.props.name}>{this.props.label}</label>
       </Fragment>
