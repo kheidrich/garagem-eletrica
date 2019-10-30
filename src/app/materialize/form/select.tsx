@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { FormSelect } from 'materialize-css';
-import SelectOption from './select-option';
+import { SelectOption } from './select-option';
 
 type SelectProps = {
     selected: string;
@@ -9,7 +9,7 @@ type SelectProps = {
     onChange: (selected: string) => void
 }
 
-export default class Select extends Component<SelectProps> {
+export class Select extends Component<SelectProps> {
     private select: HTMLSelectElement;
 
     public render() {

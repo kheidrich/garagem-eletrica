@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Row extends Component {
+export class Row extends Component {
     public render() {
         return (
             <div className="row">

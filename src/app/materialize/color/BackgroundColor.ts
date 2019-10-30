@@ -1,4 +1,4 @@
-enum BackgroundColor {
+export enum BackgroundColor {
     Red = 'red',
     Pink = 'pink',
     Purple = 'purple',
@@ -21,5 +21,3 @@ enum BackgroundColor {
     Black = 'black',
     White = 'white'
 }
-
-export default BackgroundColor;

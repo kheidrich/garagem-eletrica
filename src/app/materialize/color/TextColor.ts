@@ -1,4 +1,4 @@
-enum TextColor {
+export enum TextColor {
     Red = 'red-text',
     Pink = 'pink-text',
     Purple = 'purple-text',
@@ -22,5 +22,3 @@ enum TextColor {
     White = 'white-text',
     Default = ''
 }
-
-export default TextColor;

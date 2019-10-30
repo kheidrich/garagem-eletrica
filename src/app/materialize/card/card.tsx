@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import MaterializeColor from '../color/MaterializeColor';
-import BackgroundColorShape from '../color/BackgroundColorShape';
+import { MaterializeColor, BackgroundColorShape } from '../color';
 
 type CardProps = {
     backgroundColor: MaterializeColor
 }
-
-export default class Card extends Component<CardProps> {
+export class Card extends Component<CardProps> {
     constructor(props) {
         super(props);
     }

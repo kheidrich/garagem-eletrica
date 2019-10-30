@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import SelectableOption from './radio-option';
+import { RadioOption } from './radio-option';
 
 type RadioGroupProps = {
     name: string,
@@ -14,7 +14,7 @@ type RadioGroupState = {
     checked: string
 }
 
-export default class RadioGroup extends Component<RadioGroupProps, RadioGroupState> {
+export class RadioGroup extends Component<RadioGroupProps, RadioGroupState> {
     constructor(props) {
         super(props);
         this.state = {

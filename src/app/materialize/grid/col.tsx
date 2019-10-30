@@ -12,7 +12,7 @@ type ColProps = {
     push?: CollumSize
 }
 
-export default class Col extends Component<ColProps> {
+export class Col extends Component<ColProps> {
     private screenWidthSelectors: string[] = ['s', 'm', 'l', 'xl'];
     private collumnModifiers: string[] = ['offset', 'pull', 'push'];
 

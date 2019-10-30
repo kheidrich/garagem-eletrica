@@ -19,7 +19,7 @@ type TextInputState = {
   value: string
 }
 
-export default class TextInput extends Component<TextInputProps, TextInputState> {
+export class TextInput extends Component<TextInputProps, TextInputState> {
   constructor(props) {
     super(props);
     this.state = {

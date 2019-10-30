@@ -1,8 +1,8 @@
-import BackgroundColor from "./BackgroundColor";
-import TextColor from "./TextColor";
-import ColorIntensity from "./ColorIntensity";
+import { BackgroundColor } from "./BackgroundColor";
+import { TextColor } from "./TextColor";
+import { ColorIntensity } from "./ColorIntensity";
 
-export default interface MaterializeColor {
+export interface MaterializeColor {
     color: (BackgroundColor | TextColor),
     intensity?: ColorIntensity
 }

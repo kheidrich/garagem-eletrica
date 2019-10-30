@@ -1,4 +1,4 @@
-enum ColorIntensity {
+export enum ColorIntensity {
     Lighten5 = 'lighten-5',
     Lighten4 = 'lighten-4',
     Lighten3 = 'lighten-3',
@@ -14,5 +14,3 @@ enum ColorIntensity {
     Accent2 = 'accent-2',
     Accent1 = 'accent-1'
 }
-
-export default ColorIntensity;

@@ -5,7 +5,7 @@ type CardTitleProps = {
   center: boolean;
 }
 
-export default class CardTitle extends Component<CardTitleProps> {
+export class CardTitle extends Component<CardTitleProps> {
   public render() {
     return (
       <span className={`card-title ${this.props.center && 'center'}`}>{this.props.children}</span>
