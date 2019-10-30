@@ -23,8 +23,7 @@ export class Card extends Component<CardProps> {
 
     static defaultProps = {
         backgroundColor: {
-            color: '',
-            intensity: ''
+            color: ''
         }
     }
 }

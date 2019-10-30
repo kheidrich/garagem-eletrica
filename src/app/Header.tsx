@@ -1,7 +1,7 @@
 import React from 'react';
 import raceFlagIcon from '../assets/images/race-flag-icon.png';
 
-export default class Header extends React.Component {
+export class Header extends React.Component {
     public render() {
         return (
             <nav>

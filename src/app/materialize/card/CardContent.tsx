@@ -20,8 +20,7 @@ export class CardContent extends Component<CardContentProps> {
 
     static defaultProps = {
         textColor: {
-            color: '',
-            intensity: ''
+            color: ''
         }
     }
 }

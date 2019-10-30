@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { RadioOption } from './radio-option';
+import { RadioOption } from './RadioOption';
 
 type RadioGroupProps = {
     name: string,

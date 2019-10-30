@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { FormSelect } from 'materialize-css';
-import { SelectOption } from './select-option';
+import { SelectOption } from './SelectOption';
 
 type SelectProps = {
     selected: string;

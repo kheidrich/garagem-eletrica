@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './header';
+import { Header } from './Header';
 import { Card, CardTitle, CardContent } from './materialize/card'
 import { Row, Col, Section, Divider } from './materialize/grid';
 import { TextInput, RadioGroup, InputField } from './materialize/form';
