@@ -1,0 +1,12 @@
+nav {
+  height: 75px;
+}
+
+nav .race-flag-icon {
+  margin-top: -15px;
+}
+
+.race-flag-icon {
+  filter: invert(100%);
+  opacity: 0.3;
+}
