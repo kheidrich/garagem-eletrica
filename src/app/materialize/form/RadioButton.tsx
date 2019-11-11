@@ -19,7 +19,7 @@ export class RadioButton extends Component<RadioButtonProps> {
                         name={this.props.group}
                         type="radio"
                         value={this.props.value}
-                        checked={this.props.checked}
+                        defaultChecked={this.props.checked}
                         onChange={this.handleCheck}
                     />
                     <span>{this.props.label}</span>
