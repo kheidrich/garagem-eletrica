@@ -19,5 +19,6 @@ export enum BackgroundColor {
     Grey = 'grey',
     BlueGrey = 'blue-grey',
     Black = 'black',
-    White = 'white'
+    White = 'white',
+    Default = ''
 }

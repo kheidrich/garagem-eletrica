@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MaterializeColor, BackgroundColorShape } from '../color';
+import { MaterializeColor, BackgroundColorShape, BackgroundColor } from '../color';
 
 type CardProps = {
     backgroundColor: MaterializeColor
@@ -11,7 +11,7 @@ export class Card extends Component<CardProps> {
 
     public render() {
         return (
-            <div className={`card ${this.props.backgroundColor.color} ${this.props.backgroundColor.intensity}`}>
+            <div className={`card ${this.props.backgroundColor.toString()}`}>
                 {this.props.children}
             </div>
         );
@@ -22,8 +22,6 @@ export class Card extends Component<CardProps> {
     }
 
     static defaultProps = {
-        backgroundColor: {
-            color: ''
-        }
+        backgroundColor: new MaterializeColor(BackgroundColor.White)
     }
 }

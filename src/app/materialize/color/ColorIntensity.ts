@@ -12,5 +12,6 @@ export enum ColorIntensity {
     Accent4 = 'accent-4',
     Accent3 = 'accent-3',
     Accent2 = 'accent-2',
-    Accent1 = 'accent-1'
+    Accent1 = 'accent-1',
+    Default = ''
 }

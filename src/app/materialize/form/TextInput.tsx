@@ -5,9 +5,8 @@ type TextInputProps = {
   label: string,
   name: string,
   type: string,
-  value: string,
+  value?: string,
   icon?: string,
-  pattern?: string,
   step?: number,
   min?: number,
   max?: number,
@@ -15,11 +14,7 @@ type TextInputProps = {
   onChange?: (value: string) => void
 }
 
-type TextInputState = {
-  value: string
-}
-
-export class TextInput extends Component<TextInputProps, TextInputState> {
+export class TextInput extends Component<TextInputProps> {
   constructor(props) {
     super(props);
 
@@ -38,7 +33,6 @@ export class TextInput extends Component<TextInputProps, TextInputState> {
           step={this.props.step}
           min={this.props.min}
           max={this.props.max}
-          pattern={this.props.pattern}
           maxLength={this.props.maxLength}
           value={this.props.value}
           onChange={this.handleChange}
@@ -57,7 +51,8 @@ export class TextInput extends Component<TextInputProps, TextInputState> {
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    required: PropTypes.bool,
     icon: PropTypes.string,
     pattern: PropTypes.string,
     step: PropTypes.number,

@@ -11,9 +11,15 @@ type RadioButtonProps = {
 
 export class RadioButton extends Component<RadioButtonProps> {
 
+    constructor(props) {
+        super(props);
+
+        this.handleCheck = this.handleCheck.bind(this);
+    }
+
     public render() {
         return (
-            <span>
+            <span className="radio-button">
                 <label>
                     <input
                         name={this.props.group}

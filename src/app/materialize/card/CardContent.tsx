@@ -8,7 +8,7 @@ type CardContentProps = {
 export class CardContent extends Component<CardContentProps> {
     public render() {
         return (
-            <div className={`card-content ${this.props.textColor.color} ${this.props.textColor.intensity}`}>
+            <div className={`card-content ${this.props.textColor.toString()}`}>
                 {this.props.children}
             </div>
         );
